@@ -53,10 +53,11 @@ Potential ways to resolve this in the future (to be discussed later)
 3. Python code: mostly aligned with `third_party/nvidia/backend`.
  
 ## CUDA TileIR in CUDA 13.1
-We only support Blackwell GPU in CUDA 13.1.
+- We only support Blackwell GPU in CUDA 13.1.
+
 ### Dependency
-Triton CUDA TileIR backend depends on bin/tileiras, bin/ptxas and nvvm/lib64/libnvvm.so from CUDA 13.1.
-Triton CUDA TileIR backend also depends on CUDA TileIR dialect (https://github.com/NVIDIA/cuda-tile).
+- Triton CUDA TileIR backend depends on bin/tileiras, bin/ptxas and nvvm/lib64/libnvvm.so from CUDA 13.1.
+- Triton CUDA TileIR backend also depends on CUDA TileIR dialect (https://github.com/NVIDIA/cuda-tile).
 
 ### Auto Tune
 CUDA TileIR in CUDA 13.1 doesn't support num_warp (but may support it in future CUDA), while CUDA TileIR adds a new tuning attribute "occupancy".  **In practice, we have found that "occupancy" and "num_ctas" are crucial to CUDA TileIR perf.**
